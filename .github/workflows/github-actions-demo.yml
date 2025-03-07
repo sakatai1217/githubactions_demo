@@ -3,6 +3,19 @@ run-name: GitHub Actions Demo
 
 on:
   workflow_dispatch:
+    inputs:
+      flag:
+        type: boolean
+        required: true
+        description: "deploy_flag"
+        choice:
+          type: IMAGE_TAG
+          required: true
+          options:
+            - ""
+            - "dir1"
+            - "dir2"
+            - "dir3"
 
 jobs:
   Container_Image_Build:
@@ -15,7 +28,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set TIMESTAMP
+      - name: Check Image Tag
         run: |
-          TIMESTAMP=$(date +%Y%m%d%H%M)
-          echo ${{ env.TIMESTAMP }}
+          echo "option: ${{ github.event.inputs.choice }}"
