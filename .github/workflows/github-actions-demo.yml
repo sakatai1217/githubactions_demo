@@ -1,12 +1,12 @@
-name: GitHub Actions Demo3
-run-name: GitHub Actions Demo is testing out GitHub Actions
+name: GitHub Actions Demo
+run-name: GitHub Actions Demo
 
 on:
   workflow_dispatch:
 
 jobs:
   Container_Image_Build:
-    runs-on: [self-hosted, linux, x64, gpu]
+    runs-on: ubuntu-latest
     permissions:
       id-token: write
       contents: read
