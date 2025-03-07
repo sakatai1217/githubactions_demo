@@ -8,14 +8,14 @@ on:
         type: boolean
         required: true
         description: "deploy_flag"
-        choice:
-          type: IMAGE_TAG
-          required: true
-          options:
-            - ""
-            - "dir1"
-            - "dir2"
-            - "dir3"
+      choice:
+        type: IMAGE_TAG
+        required: true
+        options:
+          - ""
+          - "dir1"
+          - "dir2"
+          - "dir3"
 
 jobs:
   Container_Image_Build:
