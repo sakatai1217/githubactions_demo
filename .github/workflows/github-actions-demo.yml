@@ -6,7 +6,7 @@ on:
 
 jobs:
   Container_Image_Build:
-	runs-on: [self-hosted, linux, x64, gpu]
+    runs-on: [self-hosted, X64, ubuntu-latest, general]
     permissions:
       id-token: write
       contents: read
