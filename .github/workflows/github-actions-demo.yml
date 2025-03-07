@@ -8,8 +8,8 @@ on:
         type: boolean
         required: true
         description: "deploy_flag"
-      choice:
-        type: IMAGE_TAG
+      IMAGE_TAG:
+        type: choice
         required: true
         options:
           - ""
